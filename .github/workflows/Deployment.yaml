@@ -1,0 +1,15 @@
+on:
+  push:
+    branches: [main,releases/**]
+    
+name: Get Github Release Data
+jobs:
+  latest-version:
+    name: Get Latest Release
+    runs-on: ubuntu-latest
+    environment: dev   #For Environment
+    steps:
+      - uses: actions/checkout@master
+      - name: Example of consumption of the output
+        run: |
+          echo "hello world"
