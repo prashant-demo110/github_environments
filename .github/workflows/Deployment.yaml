@@ -1,0 +1,21 @@
+name: Template File for Code Deployment
+on:
+  push:
+    branches: [main,develop,releases/**]
+     
+jobs:
+  deployment:
+    name: Code Deploying
+    runs-on: ubuntu-latest
+#    environment: dev   #Uncomment this for Deployment in "dev" Environment
+#    environment: qa   #Uncomment this for Deployment in "qa" Environment
+#    environment: stage   #Uncomment this for Deployment in "stage" Environment
+#    environment: prod   #Uncomment this for Deployment in "prod" Environment
+    steps:
+      - uses: actions/checkout@master
+      - name: Echo "Hello World" 
+        run: |
+          echo "Hello World"
+          
+# Write your own steps.
+
