@@ -1,0 +1,17 @@
+name: Template File for Code Deployment
+on:
+  push:
+    branches: [main]
+     
+jobs:
+  deployment:
+    name: Code Deploying
+    runs-on: ubuntu-latest
+    environment: prod
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Echo "Hello World" 
+        run: |
+          echo "Hello World"
+          
